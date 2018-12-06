@@ -31,7 +31,7 @@ linknd_t *create_node(int value){
 	return ndPtr;
 }
 
-
+//list 연결 함수 
 void addTail(int value){
 	linknd_t *ndPtr;
 	linknd_t *newPtr;
@@ -49,3 +49,10 @@ void addTail(int value){
 		ndPtr->next = newPtr;
 	}
 }
+
+//list를 만드는 함수
+void genList(void){
+	list = create_node(0); // Header node 
+	
+	return;
+} 
