@@ -55,4 +55,16 @@ void genList(void){
 	list = create_node(0); // Header node 
 	
 	return;
-} 
+}
+
+//Node 내용 일괄 출력 
+void print_list(void){
+	linknd_t *ndPtr = list;
+	
+	ndPtr = list->next;
+	
+	while(ndPtr != NULL){
+		printf("%i ", ndPtr->data);
+		ndPtr = ndPtr->next;
+	}
+}
