@@ -13,6 +13,7 @@ int main(int argc, char *argv[]) {
 	addTail(50);
 	
 	print_list();
+	
 	print_node(3);
 	
 	return 0;
