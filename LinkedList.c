@@ -16,8 +16,8 @@ linknd_t *create_node(int value){
 	linknd_t *ndPtr;
 	
 	/*1. 동적메모리할당(구조체의 크기 만큼) 
-	2. 구조체에 입력받은 값 저장 
-	3. 반환 node 포인터*/
+	  2. 구조체에 입력받은 값 저장 
+	  3. 반환 node 포인터*/
 	ndPtr = (linknd_t*)malloc(sizeof(linknd_t));
 	
 	if(ndPtr = NULL){
@@ -52,19 +52,37 @@ void addTail(int value){
 
 //list를 만드는 함수
 void genList(void){
-	list = create_node(0); // Header node 
+	
+	list = create_node(0); // Header node
 	
 	return;
 }
 
 //Node 내용 일괄 출력 
 void print_list(void){
-	linknd_t *ndPtr = list;
+	linknd_t *ndPtr;
 	
-	ndPtr = list->next;
+	ndPtr = (linknd_t*)list->next;
 	
 	while(ndPtr != NULL){
 		printf("%i ", ndPtr->data);
 		ndPtr = ndPtr->next;
 	}
+}
+
+void print_node(int n){
+	linknd_t *ndPtr;
+	int i=0;
+	
+	ndPtr = (linknd_t*)list->next;
+	
+	while(ndPtr != NULL){
+		i++;
+		if(i==n){
+			printf("%i-th value : %i\n", i, ndPtr->data);
+			break;
+		}
+		ndPtr = ndPtr->next;
+	}
+	
 }
